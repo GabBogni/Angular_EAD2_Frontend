@@ -1,0 +1,12 @@
+h1{
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+app-product-list, app-product-register{
+    float:left;
+}
+
+app-product-register{
+    margin-left: 20%;
+}

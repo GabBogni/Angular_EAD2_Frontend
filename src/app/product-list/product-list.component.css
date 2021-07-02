@@ -1,0 +1,10 @@
+
+table,td,th{
+    border-style: solid;
+    border-collapse: collapse;
+}
+
+table{
+    margin-left: 5%;
+}
+

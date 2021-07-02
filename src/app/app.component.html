@@ -1,0 +1,8 @@
+<header>
+    <h1> EAD 1 Angular: Comunicação Com Servidor</h1>
+</header>
+
+<main>
+    <app-product-list #product_list (productEmitter) = "product_register.eventHandler($event)"> </app-product-list>
+    <app-product-register #product_register  (reloadSignalEmitter) = "product_list.eventHandler()" >  </app-product-register>
+</main>

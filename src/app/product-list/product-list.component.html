@@ -1,0 +1,25 @@
+<table>
+    <caption> <h2> Lista de Produtos  </h2> </caption>
+    <thead>
+        <tr>
+            
+            <th> Título </th>
+            <th> Descrição </th>
+            <th> Preço </th>
+   
+        </tr>
+
+    </thead>
+
+    <tbody>
+
+        <tr *ngFor = "let product of product_list">
+            <td>{{product.title}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.price}}</td>
+            <td> <button (click) = "sendProduct(product)"> Atualizar </button> </td>
+            <td> <button (click) = "deleteProduct(product)" > Deletar </button> </td>
+        </tr>
+
+    </tbody>
+</table>

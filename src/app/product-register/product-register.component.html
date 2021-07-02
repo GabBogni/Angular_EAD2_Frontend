@@ -1,0 +1,14 @@
+<div>
+    <legend> <h2> Registro de Produtos  </h2></legend>
+    <label for = "title_input">Titulo</label> <input type = "text" [(ngModel)] = "product.title" placeholder = "Digite aqui o titulo" id = "title_input"/> <br/>
+    <label for = "value_input">Preço</label> <input type = "number" [(ngModel)] = "product.price" placeholder = "Digite aqui o valor" id = "value_input"/> <br/>
+    <label for = "description_textarea">Descrição</label> <textarea  [(ngModel)] = "product.description" placeholder = "Digite aqui a descrição" id = "description_textarea"> </textarea> <br/>
+    <button *ngIf = "product._id == ''"(click) = "registerProduct()"> Registrar </button> <br/> 
+    
+    <div *ngIf = "product._id != ''"> 
+        <button (click) = "updateProduct()"> Atualizar </button> 
+        <button (click) = "resetForm()"> Cancelar </button> 
+    </div>
+ 
+</div>
+
