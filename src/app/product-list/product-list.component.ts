@@ -19,21 +19,30 @@ export class ProductListComponent implements OnInit {
 
 
   load_product_list():void{
-    this.web.getProducts().subscribe(res => this.product_list = res)
+    this.web.getProducts().subscribe(
+      res => this.product_list = res
+      , res => {
+        console.log(res)
+        alert(res.error.msg);
+      })
   }
 
   deleteProduct(product: Product){
     if(window.confirm("Você realmente deseja deletar esse produto?")){
      
-      this.web.deleteProduct(product).subscribe( res => {
-        if(res.ok){
-          window.alert("Produto deletado com sucesso");
-          this.load_product_list();
-        }
-        else{
-          window.alert("Erro ao deletar o produto")
+      this.web.deleteProduct(product).subscribe( 
+        res => {
+          if(res.ok){
+            window.alert("Produto deletado com sucesso");
+            this.load_product_list();
           }
-      });
+        }
+      , res => {
+        console.log(res);
+        alert(res.error.msg);
+      }
+
+      );
     }
 
   }

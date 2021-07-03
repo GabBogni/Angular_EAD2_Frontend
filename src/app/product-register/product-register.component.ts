@@ -24,15 +24,15 @@ export class ProductRegisterComponent implements OnInit {
   registerProduct():void{
     this.web.registerProduct(this.product).subscribe(
       res => {
-        console.log(res)
         if(res.ok){
           alert("Produto Cadastrado!");
           this.resetForm();
           this.sendReloadSignal();
         }
-        else{
-          alert("Erro ao Cadastrar!");
-        }
+      }
+      , res => {
+        console.log(res)
+        alert(res.error.msg);
       }
       );
   }
@@ -40,15 +40,15 @@ export class ProductRegisterComponent implements OnInit {
   updateProduct():void{ 
     this.web.updateProduct(this.product).subscribe(
       res => {
-        console.log(res)
         if(res.ok){
           alert("Produto Atualizado!");
           this.resetForm();
           this.sendReloadSignal();
         }
-        else{
-          alert("Erro ao Atualizar!");
-        }
+      }
+      , res => {
+        console.log(res)
+        alert(res.error.msg);
       }
       );
   }
