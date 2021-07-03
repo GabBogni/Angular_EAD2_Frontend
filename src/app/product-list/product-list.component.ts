@@ -40,7 +40,7 @@ export class ProductListComponent implements OnInit {
       , res => {
         console.log(res);
         alert(res.error.msg);
-      }
+        }
 
       );
     }

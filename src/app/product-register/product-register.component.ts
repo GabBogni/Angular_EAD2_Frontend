@@ -34,7 +34,7 @@ export class ProductRegisterComponent implements OnInit {
         console.log(res)
         alert(res.error.msg);
       }
-      );
+    );
   }
 
   updateProduct():void{ 
@@ -50,7 +50,7 @@ export class ProductRegisterComponent implements OnInit {
         console.log(res)
         alert(res.error.msg);
       }
-      );
+    );
   }
 
   eventHandler(product: Product):void{
