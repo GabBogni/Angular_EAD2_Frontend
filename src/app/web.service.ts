@@ -10,7 +10,7 @@ import { BrowserDynamicTestingModule } from '@angular/platform-browser-dynamic/t
 })
 export class WebService {
 
-  baseUrl = "http://localhost:8080/api/produtos";
+  baseUrl = "https://sc3002519-angular-ead2-backend.glitch.me/api/produtos";
 
   constructor(private http: HttpClient) { 
 
